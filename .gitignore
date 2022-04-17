@@ -1,0 +1,9 @@
+.idea
+commonlibs/.idea
+commonlibs/target
+consumer/.idea
+consumer/.mvn
+consumer/target
+producer/.idea
+producer/.mvn
+producer/target
