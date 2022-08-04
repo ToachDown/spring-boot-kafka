@@ -27,7 +27,6 @@ public class MessageProducer {
 
     public void sendMessage(Person user) {
         ListenableFuture<SendResult<String, Person>> future = kafkaTemplate.send(topicName, user);
-
         future.addCallback(new ListenableFutureCallback<SendResult<String, Person>>() {
 
             @Override

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import service.PersonGenerator;
 
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -20,7 +21,7 @@ public class PersonGeneratorProducer implements PersonGenerator {
     @Override
     public Person generateUser() {
         return Person.builder()
-                .id(UUID.randomUUID().toString())
+                .id(UUID.randomUUID())
                 .email(UUID.randomUUID().toString().substring(26) + "@" + "producer.com")
                 .password(UUID.randomUUID().toString().substring(16))
                 .role(roles.get((int)(Math.random() * (roles.size()))).name())

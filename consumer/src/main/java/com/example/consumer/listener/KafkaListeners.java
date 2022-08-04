@@ -17,6 +17,6 @@ public class KafkaListeners {
     @KafkaListener(topics = TOPIC, containerFactory = "kafkaListenerContainerFactory", groupId = ConsumerConfig.GROUP_ID_CONFIG)
     public void listener(Person data) {
         System.out.println("Recieved message: " + data);
-        dataService.saveMessage(data);
+ //       dataService.saveMessage(data);
     }
 }

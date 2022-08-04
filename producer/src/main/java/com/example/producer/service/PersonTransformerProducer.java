@@ -13,7 +13,7 @@ public class PersonTransformerProducer implements PersonTransformer {
     @Override
     public Person transform(PersonDto dto) {
         return Person.builder()
-                .id(UUID.randomUUID().toString())
+                .id(UUID.randomUUID())
                 .email(dto.getEmail())
                 .password(dto.getPassword())
                 .role(dto.getRole())
