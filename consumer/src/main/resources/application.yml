@@ -6,7 +6,7 @@ spring:
     topic:
       name: user
     consumer:
-      bootstrap-servers: ${KAFKA_URL:localhost:9092}
+      bootstrap-servers: ${KAFKA_URL:localhost:9092,localhost:9093,localhost:9094}
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

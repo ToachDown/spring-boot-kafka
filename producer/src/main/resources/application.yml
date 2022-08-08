@@ -4,9 +4,9 @@ server:
 spring:
   kafka:
     topic:
-      name: user
+      name: fish
       partitions: 3
     producer:
-      bootstrap-servers: ${KAFKA_URL:localhost:9092}
+      bootstrap-servers: ${KAFKA_URL:localhost:9092,localhost:9093,localhost:9094}
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
